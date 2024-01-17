@@ -56,12 +56,12 @@ button {
 }
 
 #result-table th, #result-table td {
-    border: 1px solid #ddd;
+    border: 1px solid #ccf5c8;
     padding: 8px;
     text-align: left;
 }
 
 #result-table th {
-    background-color: #4caf50;
+    background-color: #0a1d0a;
     color: #fff;
 }
