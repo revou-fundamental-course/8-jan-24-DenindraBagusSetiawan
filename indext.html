@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator untuk Persegi</title>
-    <link rel="stylesheet" href="stylesheet/styles.css">
+    <title>Kalkulator Persegi</title>
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
     <div class="calculator-container">
@@ -15,10 +15,28 @@
         <br>
 
         <button onclick="calculate()">Hitung</button>
+        <button onclick="reset()">Reset</button>
 
-        <div id="result" class="result-container"></div>
+        <div class="result-container">
+            <div id="calculation-result">
+                <p id="formula">Rumus: Luas = sisi x sisi dan Keliling = 4 x sisi</p>
+                <p id="calculation">Perhitungan: </p>
+            </div>
+
+            <table id="result-table">
+                <tr>
+                    <th>Hasil Perhitungan</th>
+                </tr>
+                <tr>
+                    <td id="area">Luas: </td>
+                </tr>
+                <tr>
+                    <td id="perimeter">Keliling: </td>
+                </tr>
+            </table>
+        </div>
     </div>
- 
+
+    <script src="JS/script.js"></script>
 </body>
-<script src="script/script.js"></script>
 </html>
