@@ -1,3 +1,20 @@
+document.addEventListener("DOMContentLoaded", initialize);
+
+function initialize() {
+    // Menampilkan rumus pada tabel saat halaman dimuat
+    displayDefaultFormulas();
+}
+
+function displayDefaultFormulas() {
+    // Teks rumus default
+    var formulaArea = "sisi x sisi";
+    var formulaPerimeter = "4 x sisi";
+
+    // Menampilkan rumus default pada tabel
+    document.getElementById("formula-area").innerText = formulaArea;
+    document.getElementById("formula-perimeter").innerText = formulaPerimeter;
+}
+
 function calculate() {
     var sideLength = document.getElementById("sideLength").value;
 
@@ -9,22 +26,23 @@ function calculate() {
     var area = sideLength * sideLength;
     var perimeter = 4 * sideLength;
 
-    var calculationResult = `
-        <p>Perhitungan:</p>
-        <p>Luas = ${sideLength} x ${sideLength} = ${area}</p>
-        <p>Keliling = 4 x ${sideLength} = ${perimeter}</p>
-    `;
+    // Update nilai dalam tabel
+    document.getElementById("area").innerText = area;
+    document.getElementById("perimeter").innerText = perimeter;
 
-    document.getElementById("calculation").innerHTML = calculationResult;
-
-    document.getElementById("area").innerText = "Luas: " + area;
-    document.getElementById("perimeter").innerText = "Keliling: " + perimeter;
+    // Update rumus dalam tabel
+    document.getElementById("formula-area").innerText = `${sideLength} x ${sideLength}`;
+    document.getElementById("formula-perimeter").innerText = `4 x ${sideLength}`;
 }
 
 function reset() {
     document.getElementById("sideLength").value = "";
-    document.getElementById("formula").innerText = "Rumus: Luas = sisi x sisi, Keliling = 4 x sisi";
-    document.getElementById("calculation").innerText = "Perhitungan: ";
-    document.getElementById("area").innerText = "Luas: ";
-    document.getElementById("perimeter").innerText = "Keliling: ";
+
+    // Reset nilai dalam tabel
+    document.getElementById("area").innerText = "-";
+    document.getElementById("perimeter").innerText = "-";
+
+    // Reset rumus dalam tabel
+    document.getElementById("formula-area").innerText = "sisi x sisi";
+    document.getElementById("formula-perimeter").innerText = "4 x sisi";
 }
