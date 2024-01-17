@@ -9,15 +9,22 @@ function calculate() {
     var area = sideLength * sideLength;
     var perimeter = 4 * sideLength;
 
-    var resultMessage = `
-        <p>Luas = ${sideLength} x ${sideLength}</p>
-        <p>Luas = ${sideLength * sideLength}</p>
-        <p>Luas = ${area}</p>
-        <br>
-        <p>Keliling = 4 x ${sideLength}</p>
-        <p>Keliling = ${4 * sideLength}</p>
-        <p>Keliling = ${perimeter}</p>
+    var calculationResult = `
+        <p>Perhitungan:</p>
+        <p>Luas = ${sideLength} x ${sideLength} = ${area}</p>
+        <p>Keliling = 4 x ${sideLength} = ${perimeter}</p>
     `;
 
-    document.getElementById("result").innerHTML = resultMessage;
+    document.getElementById("calculation").innerHTML = calculationResult;
+
+    document.getElementById("area").innerText = "Luas: " + area;
+    document.getElementById("perimeter").innerText = "Keliling: " + perimeter;
+}
+
+function reset() {
+    document.getElementById("sideLength").value = "";
+    document.getElementById("formula").innerText = "Rumus: Luas = sisi x sisi, Keliling = 4 x sisi";
+    document.getElementById("calculation").innerText = "Perhitungan: ";
+    document.getElementById("area").innerText = "Luas: ";
+    document.getElementById("perimeter").innerText = "Keliling: ";
 }
