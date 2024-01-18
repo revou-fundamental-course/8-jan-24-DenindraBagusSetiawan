@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: url('aset/Belakang.jpg') center/cover no-repeat;
+    background: url('C:\Users\ACER\Videos\Revou\8-jan-24-DenindraBagusSetiawan\aset\Belakang.jpg') center/cover no-repeat;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -56,7 +56,7 @@ button {
 }
 
 #result-table th, #result-table td {
-    border: 1px solid #020f01;
+    border: 1px solid #000000;
     padding: 8px;
     text-align: left;
 }
