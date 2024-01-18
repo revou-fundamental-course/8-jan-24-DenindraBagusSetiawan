@@ -26,13 +26,13 @@ function calculate() {
     var area = sideLength * sideLength;
     var perimeter = 4 * sideLength;
 
-    // Update nilai dalam tabel
-    document.getElementById("area").innerText = area;
-    document.getElementById("perimeter").innerText = perimeter;
+    // Update nilai dalam tabel dengan satuan cm
+    document.getElementById("area").innerHTML = area + " cm²";
+    document.getElementById("perimeter").innerHTML = perimeter + " cm";
 
-    // Update rumus dalam tabel
-    document.getElementById("formula-area").innerText = `${sideLength} x ${sideLength}`;
-    document.getElementById("formula-perimeter").innerText = `4 x ${sideLength}`;
+    // Update rumus dalam tabel dengan satuan cm
+    document.getElementById("formula-area").innerHTML = `${sideLength} cm x ${sideLength} cm`;
+    document.getElementById("formula-perimeter").innerHTML = `4 x ${sideLength} cm`;
 }
 
 function reset() {
