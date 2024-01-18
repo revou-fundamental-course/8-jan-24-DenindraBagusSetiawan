@@ -1,3 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('CSS/aset/Bg.jpg'); center/cover no-repeat;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
 
 h1 {
     font-family: 'Times New Roman', Times, serif;
